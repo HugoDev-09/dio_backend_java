@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        var scanner = new Scanner(System.in);
+        System.out.println("Informe um número: ");
+        int num1 = scanner.nextInt();
+
+        System.out.println("Informe um segundo número maior que o numero escrito anterior: ");
+        int num2 = scanner.nextInt();
+
+        while(num2 > num1){
+            System.out.println("Escolha se quer impar ou par: ");
+                var escolha = scanner.next();
+
+                if(escolha.equals("par")){
+                    for (num2 = num2; num1 < num2; num2--) {
+                        int resto = num2 % 2;
+                        if ( resto == 0) {
+
+                        System.out.println(num2);
+                        }
+                    }
+
+                break;
+                }else if(escolha.equals("impar")){
+                    for (num2 = num2; num1 < num2; num2--) {
+                        int resto = num2-- % 2;
+                        if ( resto == 0) {
+
+                            System.out.println(num2);
+                        }
+                    }
+                    System.out.println("Seu numero é impar ");
+                break;
+                }
+                }
+
+            }
+
+
+        }
+
+
+
+
+
